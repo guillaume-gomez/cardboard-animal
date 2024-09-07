@@ -11,7 +11,7 @@ interface ModelProps {
 }
 
 function Model({path, position, rotation, scale} : ModelProps) {
-const props = useSpring(
+  const props = useSpring(
     {
       from: { position: [0,0,0], rotation:[0,0,0], scale: 1 },
       to: { position, scale, rotation },
@@ -22,7 +22,8 @@ const props = useSpring(
       },
       reset: true,
     }
-  )
+  );
+
   return (
       <AnimatedGltf
         src={path}
@@ -30,8 +31,7 @@ const props = useSpring(
         rotation={props.rotation}
         scale={props.scale}
       />
-
-  )
+  );
 }
 
 export default Model;
