@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 import ThreeJsRenderer from "./components/ThreeJsRenderer";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectAnimal, setSelectedAnimal] = useState<string>("girafe");
 
   return (
       <div style={{width: "100%"}}>
@@ -16,10 +15,14 @@ function App() {
             <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
         <h1>Vite + React</h1>
-        <div className="card">
-          <div style={{border: "2px solid blue"}}>
-            <ThreeJsRenderer />
-          </div>
+        <select
+          value={selectAnimal}
+          onChange={(e) => setSelectedAnimal(e.target.value)}
+        >
+          <option value="girafe">Girafe</option>
+        </select>
+        <div style={{border: "2px solid blue"}}>
+          <ThreeJsRenderer />
         </div>
       </div>
   );

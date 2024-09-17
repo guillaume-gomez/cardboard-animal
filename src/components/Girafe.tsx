@@ -4,7 +4,7 @@ function Girafe() {
   return (
     <Animal
       pieces={[
-        { path: "Donut.glb", position: [5,4,0], rotation: [0,0,0], scale: 0.5 },
+        { path: "first-try.glb", position: [5,4,0], rotation: [Math.PI/2,0,0], scale: 2.0 },
         { path: "Donut.glb", position: [1,4,0], rotation: [0,Math.PI/2,0], scale: 0.33 },
         { path: "Donut.glb", position: [2,5,0], rotation: [0,0,Math.PI/4], scale: 0.25 },
         { path: "Donut.glb", position: [5,2,0], rotation: [0,0,Math.PI], scale: 0.60 },
